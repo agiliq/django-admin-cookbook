@@ -1,0 +1,71 @@
+### Text and Design
+
+* How to change 'Django administration' text?
+* How to set the plural text for a model?
+* How to add a logo to Django admin?
+* How to create two independent admin sites?
+* How to remove default apps from Django admin?
+* How to override Django admin templates?
+* How to set ordering of Apps and models in Django admin dashboard.
+
+### Calculated fields
+
+* How to show calculated fields on listview page?
+* How to show many to many fields on listview page?
+* How to enable sorting on calculated fields?
+* How to enable filtering on calculated fields?
+
+### Misc
+
+* How to get Django admin urls for specific objects?
+* How to add a model twice to Django admin?
+* How to override save behaviour for Django admin?
+* How to add a database view to Django admin?
+* How to optimize queries in Django admin?
+
+### Permissions
+
+* How to restrict Django admin to specific users?
+* How to restrict access to parts of Django admin?
+* How to allow creating only one object from the admin?
+* How to remove the 'Add'/'Delete' button for a model?
+
+
+### Multiple models and inlines
+
+* How to edit mutiple models from one Django admin?
+* How to add One to One relation as admin inline?
+* How to add nested inlines in Django admin?
+* How to create a single Django admin from two different models?
+
+
+### Bulk and custom actions
+
+* How to export CSV from Django admin?
+* How to import CSV using Django admin?
+* How to remove the delete selected action in Django admin?
+* How to add additional actions in Django admin?
+* How to add Custom Action Buttons (Not actions) to Django Admin list page?
+
+### Listview Page
+
+* How to show larger number of rows on listview page?
+* How to disable django admin pagination?
+* How to add date base filtering in Django admin?
+* How to show “on” or “off” icons for calculated boolean fields?
+
+### Changeview Page
+
+* How to show image from Imagefield in Django admin.
+* How to associate model with current user while saving?
+* How to mark a field as readonly in admin?
+* How to show an uneditable field in admin?
+* How to make a field editable while creating, but read only in existing objects?
+* How to filter FK dropdown values in django admin?
+* How to manage a model with a FK with a large number of objects?
+* How to change ForeignKey display text in dropdowns?
+* How to add a custom button to Django change view page?
+
+
+formfield_for_foreignkey
+models.ForeignKey(ForeignStufg, verbose_name='your text')
