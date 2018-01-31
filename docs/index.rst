@@ -16,7 +16,10 @@ Django admin cookbook - How to do things with Django admin
    change_text
    plural_text
    logo
-
+   two_admin
+   remove_default
+   override_default_templates
+   set_ordering
 
 
 Indices and tables
