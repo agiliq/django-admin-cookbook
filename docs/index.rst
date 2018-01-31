@@ -8,8 +8,12 @@ Django Admin Cookbook
 
 Django admin cookbook - How to do things with Django admin
 
+
+Text and Design
++++++++++++++++++++++
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
 
@@ -21,10 +25,21 @@ Django admin cookbook - How to do things with Django admin
    override_default_templates
    set_ordering
 
+Calculated fields
++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   calculated_fields
+   many_to_many
+   sorting_calculated_fields
+   filtering_calculated_fields
+
 
 Indices and tables
-==================
++++++++++++++++++++++
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
