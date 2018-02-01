@@ -4,6 +4,9 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name_plural = "Categories"
+
 
 class Origin(models.Model):
     name = models.CharField(max_length=100)
@@ -37,6 +40,9 @@ class Entity(models.Model):
 
 
 class Hero(Entity):
+
+    class Meta:
+        verbose_name_plural = "Heroes"
 
     is_immortal = models.BooleanField(default=True)
 
