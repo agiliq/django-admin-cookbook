@@ -24,4 +24,7 @@ You can do this by setting the :code:`verbose_name_plural` in your models. Chang
             verbose_name_plural = "Heroes"
 
 
+With the changes your Admin will look like this.
+
+
 .. image:: images/plural_fixed.png
