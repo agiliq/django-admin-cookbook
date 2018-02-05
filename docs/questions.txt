@@ -6,7 +6,7 @@
 * How to create two independent admin sites?
 * How to remove default apps from Django admin?
 * How to override Django admin templates?
-* How to set ordering of Apps and models in Django admin dashboard.
+
 
 ### Calculated fields
 
@@ -22,6 +22,7 @@
 * How to override save behaviour for Django admin?
 * How to add a database view to Django admin?
 * How to optimize queries in Django admin?
+* How to set ordering of Apps and models in Django admin dashboard.
 
 ### Permissions
 
@@ -65,6 +66,15 @@
 * How to manage a model with a FK with a large number of objects?
 * How to change ForeignKey display text in dropdowns?
 * How to add a custom button to Django change view page?
+
+### Misc
+
+* How to get Django admin urls for specific objects?
+* How to add a model twice to Django admin?
+* How to override save behaviour for Django admin?
+* How to add a database view to Django admin?
+* How to optimize queries in Django admin?
+* How to set ordering of Apps and models in Django admin dashboard.
 
 
 formfield_for_foreignkey

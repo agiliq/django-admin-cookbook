@@ -18,8 +18,6 @@ Text and Design
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
-
 
    change_text
    plural_text
@@ -34,12 +32,23 @@ Calculated fields
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
 
    calculated_fields
    many_to_many
    sorting_calculated_fields
    filtering_calculated_fields
+
+Permissions
++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+
+   specific_users
+   restrict
+   restrict_parts
+   only_one
+   remove_add_delete
 
 
 Indices and tables
