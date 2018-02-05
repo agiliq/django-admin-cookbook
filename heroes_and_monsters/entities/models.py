@@ -7,9 +7,15 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "Categories"
 
+    def __str__(self):
+        return self.name
+
 
 class Origin(models.Model):
     name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 
 class Entity(models.Model):
@@ -34,6 +40,9 @@ class Entity(models.Model):
         )
     )
     description = models.TextField()
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         abstract = True

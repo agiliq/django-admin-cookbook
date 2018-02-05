@@ -8,7 +8,7 @@ Right now our :code:`entity` and :code:`event` models are in same place. UMSRA h
 
 We will keep the default admin for `entities` and create a new subclass of :code:`AdminSite` for `events`.
 
-In our :code:`events/admin.py` we do
+In our :code:`events/admin.py` we do::
 
     class EventAdminSite(AdminSite):
         site_header = "UMSRA Events Admin"
@@ -23,7 +23,7 @@ In our :code:`events/admin.py` we do
     event_admin_site.register(EventHero)
     event_admin_site.register(EventVillain)
 
-And change the :code:`urls.py` to
+And change the :code:`urls.py` to ::
 
     from events.admin import event_admin_site
 
