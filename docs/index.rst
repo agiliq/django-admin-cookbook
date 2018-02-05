@@ -85,6 +85,20 @@ Listview Page
    boolean_fields
 
 
+Misc
+++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+
+   object_url
+   add_model_twice
+   override_save
+   database_view
+   optimize_queries
+   set_ordering
+
+
 Indices and tables
 +++++++++++++++++++++
 .. toctree::
