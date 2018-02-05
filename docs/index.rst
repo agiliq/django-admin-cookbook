@@ -1,12 +1,16 @@
-.. Django admin cookbook documentation master file, created by
-   sphinx-quickstart on Wed Jan 31 17:08:48 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Django Admin Cookbook
 ===========================================================
 
-Django admin cookbook - How to do things with Django admin
+Django Admin Cookbook - How to do things with Django admin.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This is a book about doing things with Django admin. It takes the form of about forty questions and common tasks with Django admin we answer.
+
+The the chapters are based on a common set of models, which you can read in detail here (:doc:`models`). In short, we have two apps,
+:code:`events` and :code:`entities`. The models are
+
+* Events: :code:`Epic`, :code:`Event`, :code:`EventHero`, :code:`EventVillian`
+* Entities: :code:`Category`, :code:`Origin`, :code:`Hero`, :code:`Villain`
 
 
 Text and Design
@@ -19,9 +23,9 @@ Text and Design
 
    change_text
    plural_text
-   logo
    two_admin
    remove_default
+   logo
    override_default_templates
    set_ordering
 
@@ -40,6 +44,10 @@ Calculated fields
 
 Indices and tables
 +++++++++++++++++++++
+.. toctree::
+   :maxdepth: 1
+
+   models
 
 * :ref:`genindex`
 * :ref:`modindex`
