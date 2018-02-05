@@ -50,6 +50,17 @@ Permissions
    only_one
    remove_add_delete
 
+Multiple models and inlines
+++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+
+   edit_multiple_models
+   one_to_one_inline
+   nested_inlines
+   single_admin_multiple_models
+
 
 Indices and tables
 +++++++++++++++++++++
