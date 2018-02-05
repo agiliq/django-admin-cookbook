@@ -61,6 +61,29 @@ Multiple models and inlines
    nested_inlines
    single_admin_multiple_models
 
+Bulk and custom actions
+++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+
+   export
+   import
+   remove_delete_selected
+   add_actions
+   action_buttons
+
+Listview Page
+++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+
+   increase_row_count
+   disable_pagination
+   date_based_filtering
+   boolean_fields
+
 
 Indices and tables
 +++++++++++++++++++++
