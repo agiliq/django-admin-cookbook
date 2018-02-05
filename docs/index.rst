@@ -84,6 +84,22 @@ Listview Page
    date_based_filtering
    boolean_fields
 
+Changeview Page
+++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+
+   imagefield
+   current_user
+   changeview_readonly
+   uneditable_field
+   uneditable_existing
+   filter_fk_dropdown
+   many_fks
+   fk_display
+   custom_button
+
 
 Misc
 ++++++++++++++++++++++++++++++++++++++++++
