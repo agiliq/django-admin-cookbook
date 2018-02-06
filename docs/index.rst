@@ -33,7 +33,7 @@ Calculated fields
    :maxdepth: 1
 
    calculated_fields
-   many_to_many
+   optimize_queries
    sorting_calculated_fields
    filtering_calculated_fields
 
@@ -82,6 +82,7 @@ Listview Page
    disable_pagination
    date_based_filtering
    boolean_fields
+   many_to_many
 
 Changeview Page
 ++++++++++++++++++++++++++++++++++++++++++
@@ -110,7 +111,6 @@ Misc
    add_model_twice
    override_save
    database_view
-   optimize_queries
    set_ordering
 
 

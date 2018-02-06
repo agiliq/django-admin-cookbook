@@ -34,7 +34,7 @@ author = 'Agiliq'
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-# This will track teh Django version against whihch this is written.
+# This will track the Django version against which this is written.
 version = '2.0'
 
 release = '2.0'
