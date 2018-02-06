@@ -12,12 +12,17 @@ The chapters are based on a common set of models, which you can read in detail h
 * Events: :code:`Epic`, :code:`Event`, :code:`EventHero`, :code:`EventVillian`
 * Entities: :code:`Category`, :code:`Origin`, :code:`Hero`, :code:`Villain`
 
+.. toctree::
+   :maxdepth: 1
+
+   introduction
 
 Text and Design
 +++++++++++++++++++++
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    change_text
    plural_text
@@ -31,6 +36,7 @@ Calculated fields
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    calculated_fields
    optimize_queries
@@ -43,6 +49,7 @@ Permissions
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    specific_users
    restrict
@@ -55,6 +62,7 @@ Multiple models and inlines
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    edit_multiple_models
    one_to_one_inline
@@ -66,6 +74,7 @@ Bulk and custom actions
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    export
    import
@@ -78,6 +87,7 @@ Listview Page
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    increase_row_count
    disable_pagination
@@ -89,6 +99,7 @@ Changeview Page
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    imagefield
    current_user
@@ -106,6 +117,7 @@ Misc
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    object_url
    add_model_twice
