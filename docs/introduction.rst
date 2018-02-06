@@ -1,10 +1,10 @@
 Introduction
 ==============
 
-Django Admin Cookbook is a book about doing things with Django admin. It is targetted towards intermediate Django developers,
-who have some experience with Django admin, but are looking to expand their knowldge of Django admin and acieve mastery of Django admin.
+Django Admin Cookbook is a book about doing things with Django admin. It is targeted towards intermediate Django developers,
+who have some experience with Django admin, but are looking to expand their knowledge of Django admin and achieve mastery of Django admin.
 
-It takes the form of about question and answers about common tasks you might do with Django admin. All the chapters are based on a common set of models, which you can read in detail here (:doc:`models`). In short, we have two apps,
+It takes the form of question and answers about common tasks you might do with Django admin. All the chapters are based on a common set of models, which you can read in detail here (:doc:`models`). In short, we have two apps,
 :code:`events` and :code:`entities`. The models are
 
 * Events: :code:`Epic`, :code:`Event`, :code:`EventHero`, :code:`EventVillian`
