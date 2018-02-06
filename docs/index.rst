@@ -36,6 +36,7 @@ Calculated fields
    optimize_queries
    sorting_calculated_fields
    filtering_calculated_fields
+   boolean_fields
 
 Permissions
 +++++++++++++++++++++
@@ -81,7 +82,6 @@ Listview Page
    increase_row_count
    disable_pagination
    date_based_filtering
-   boolean_fields
    many_to_many
 
 Changeview Page

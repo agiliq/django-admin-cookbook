@@ -33,6 +33,8 @@ class HeroAdmin(admin.ModelAdmin):
     def is_very_benevolent(self, obj):
         return obj.benevolence_factor > 75
 
+    is_very_benevolent.boolean = True
+
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
