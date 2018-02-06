@@ -13,7 +13,7 @@ You can do this in two ways.
 
 
 Adding a method to the model
-===========================================================
+++++++++++++++++++++++++++++++++++++++++++
 
 You can add two methods to your :code:`Origin` model like this::
 
@@ -28,7 +28,7 @@ And change :code"`list_display` to :code:`list_display = ("name", "hero_count", 
 
 
 Adding a method to the ModelAdmin
-===========================================================
+++++++++++++++++++++++++++++++++++++++++++
 
 If you don't want to add method to the model, you can do instead add the method to the ModelAdmin. ::
 
@@ -44,7 +44,7 @@ If you don't want to add method to the model, you can do instead add the method 
 The :code:`list_display`, as earlier, changes to :code:`list_display = ("name", "hero_count", "villain_count")`.
 
 Performance considerations for calculated_fields
-===========================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 With either of the above approaches, you would be running two exta queries per object (One per caluclated field). You can find how to optimize this in
 :doc:`optimize_queries`.
