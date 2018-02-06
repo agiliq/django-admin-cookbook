@@ -25,7 +25,6 @@ Text and Design
    remove_default
    logo
    override_default_templates
-   set_ordering
 
 Calculated fields
 +++++++++++++++++++++
