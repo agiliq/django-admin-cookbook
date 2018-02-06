@@ -4,7 +4,7 @@ How to optimize queries in Django admin?
 If you have a lot of calculated fields in your admin, you can be running multipel queries per object leading to your admin can becoming quite slow.
 To fix this you can override the :code:`get_queryset` method on model admin to annotate the calculated fields.
 
-Lets take the example of this `ModelAdmin` we have for `Origin`::
+Lets take the example of this :code:`ModelAdmin` we have for :code:`Origin`::
 
     @admin.register(Origin)
     class OriginAdmin(admin.ModelAdmin):

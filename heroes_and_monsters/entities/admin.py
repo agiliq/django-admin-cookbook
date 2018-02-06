@@ -33,3 +33,6 @@ class OriginAdmin(admin.ModelAdmin):
 
     def villain_count(self, obj):
         return obj._villain_count
+
+    hero_count.admin_order_field = '_hero_count'
+    villain_count.admin_order_field = '_villain_count'
