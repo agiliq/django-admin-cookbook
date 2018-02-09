@@ -51,10 +51,10 @@ Bulk and custom actions
    :maxdepth: 1
    :numbered:
 
+   add_actions
    export
    import
    remove_delete_selected
-   add_actions
    action_buttons
 
 Permissions
