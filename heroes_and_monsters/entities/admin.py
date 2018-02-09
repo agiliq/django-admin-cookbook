@@ -3,7 +3,8 @@ from django.db.models import Count
 
 from .models import Hero, Villain, Category, Origin
 
-admin.site.register(Villain)
+import csv
+from django.http import HttpResponse
 
 
 class IsVeryBenevolentFilter(admin.SimpleListFilter):
@@ -25,16 +26,43 @@ class IsVeryBenevolentFilter(admin.SimpleListFilter):
         return queryset
 
 
+class ExportCsvMixin:
+    def export_as_csv(self, request, queryset):
+
+        meta = self.model._meta
+        field_names = [field.name for field in meta.fields]
+
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename={}.csv'.format(meta)
+        writer = csv.writer(response)
+
+        writer.writerow(field_names)
+        for obj in queryset:
+            row = writer.writerow([getattr(obj, field) for field in field_names])
+
+        return response
+
+    export_as_csv.short_description = "Export Selected"
+
+
 @admin.register(Hero)
-class HeroAdmin(admin.ModelAdmin):
+class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ("name", "is_immortal", "category", "origin", "is_very_benevolent")
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
+    actions = ["export_as_csv"]
+
+
 
     def is_very_benevolent(self, obj):
         return obj.benevolence_factor > 75
 
     is_very_benevolent.boolean = True
 
+
+@admin.register(Villain)
+class VillainAdmin(admin.ModelAdmin, ExportCsvMixin):
+    list_display = ("name", "category", "origin")
+    actions = ["export_as_csv"]
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):

@@ -44,6 +44,19 @@ Calculated fields
    filtering_calculated_fields
    boolean_fields
 
+Bulk and custom actions
+++++++++++++++++++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   export
+   import
+   remove_delete_selected
+   add_actions
+   action_buttons
+
 Permissions
 +++++++++++++++++++++
 
@@ -69,18 +82,7 @@ Multiple models and inlines
    nested_inlines
    single_admin_multiple_models
 
-Bulk and custom actions
-++++++++++++++++++++++++++++++++++++++++++
 
-.. toctree::
-   :maxdepth: 1
-   :numbered:
-
-   export
-   import
-   remove_delete_selected
-   add_actions
-   action_buttons
 
 Listview Page
 ++++++++++++++++++++++++++++++++++++++++++
