@@ -75,10 +75,22 @@ class VillainAdmin(admin.ModelAdmin, ExportCsvMixin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name",)
 
+    def has_add_permission(self, request):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 
 @admin.register(Origin)
 class OriginAdmin(admin.ModelAdmin):
     list_display = ("name", "hero_count", "villain_count")
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)

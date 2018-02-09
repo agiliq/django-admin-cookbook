@@ -16,3 +16,5 @@ We can remove it form the dropdown. Your code looks like this with the changes.:
 And your admin looks like this
 
 .. image:: export_selected.png
+
+You should also read :doc:`remove_add_delete`.
