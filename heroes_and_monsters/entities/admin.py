@@ -4,6 +4,7 @@ from django.db.models import Count
 from .models import Hero, Villain, Category, Origin
 
 import csv
+import sys
 from django.http import HttpResponse
 
 
@@ -52,7 +53,7 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
     actions = ["mark_immortal"]
 
-    list_per_page = 1
+    list_per_page = sys.maxsize
 
     def mark_immortal(self, request, queryset):
         queryset.update(is_immortal=True)
