@@ -79,6 +79,11 @@ class Hero(Entity):
     )
 
 
+class HeroProxy(Hero):
+
+    class Meta:
+        proxy = True
+
 class Villain(Entity):
     is_immortal = models.BooleanField(default=False)
 

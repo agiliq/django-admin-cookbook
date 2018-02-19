@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db.models import Count
 
-from .models import Hero, Villain, Category, Origin
+from .models import Hero, Villain, Category, Origin, HeroProxy
 
 import csv
 import sys
@@ -83,6 +83,13 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
         return obj.benevolence_factor > 75
 
     is_very_benevolent.boolean = True
+
+
+@admin.register(HeroProxy)
+class HeroProxyAdmin(admin.ModelAdmin):
+    list_display = ("name", "is_immortal", "category", "origin",)
+    readonly_fields = ("name", "is_immortal", "category", "origin",)
+
 
 
 @admin.register(Villain)
