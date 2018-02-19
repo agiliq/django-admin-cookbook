@@ -55,6 +55,12 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     exclude = ['added_by',]
 
+    def get_readonly_fields(self, request, obj=None):
+        if obj:
+            return ["name", "category"]
+        else:
+            return []
+
     def save_model(self, request, obj, form, change):
         if not obj.pk:
             # Only set added_by during the first save.
