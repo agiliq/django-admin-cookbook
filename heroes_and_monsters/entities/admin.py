@@ -53,7 +53,14 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
     actions = ["mark_immortal"]
 
-    list_per_page = sys.maxsize
+    exclude = ['added_by',]
+
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:
+            # Only set added_by during the first save.
+            obj.added_by = request.user
+        super().save_model(request, obj, form, change)
+
 
     def mark_immortal(self, request, queryset):
         queryset.update(is_immortal=True)
