@@ -6,3 +6,4 @@ To disable a user from being able to access the admin, you should set :code:`is_
 
 This holds true even if the user is a superuser. :code:`is_superuser=True`. If a non-staff tries to access the admin, they see a message like this.
 
+.. image:: access_no_is_staff.png
