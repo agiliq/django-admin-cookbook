@@ -67,6 +67,9 @@ class Hero(Entity):
     arbitrariness_factor = models.PositiveSmallIntegerField(
         help_text="How arbitrary this hero is?"
     )
+
+    headshot = models.ImageField(null=True, blank=True, upload_to="hero_headshots/")
+
     # relationships
     father = models.ForeignKey(
         "self", related_name="+", null=True, blank=True, on_delete=models.SET_NULL

@@ -6,6 +6,7 @@ from .models import Hero, Villain, Category, Origin, HeroProxy
 import csv
 import sys
 from django.http import HttpResponse
+from django.utils.safestring import mark_safe
 
 
 class IsVeryBenevolentFilter(admin.SimpleListFilter):
@@ -55,7 +56,17 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     exclude = ['added_by',]
 
-    readonly_fields = ["father", "mother", "spouse"]
+    # fields = ["headshot_image"]
+
+    readonly_fields = ["father", "mother", "spouse", "headshot_image"]
+
+    def headshot_image(self, obj):
+        return mark_safe('<img src="{url}" width="{width}" height={height} />'.format(
+            url = obj.headshot.url,
+            width=obj.headshot.width,
+            height=obj.headshot.height,
+            )
+    )
 
     # def get_readonly_fields(self, request, obj=None):
     #     if obj:
