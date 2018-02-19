@@ -27,6 +27,7 @@ class IsVeryBenevolentFilter(admin.SimpleListFilter):
 
 
 class ExportCsvMixin:
+
     def export_as_csv(self, request, queryset):
 
         meta = self.model._meta
@@ -50,6 +51,8 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ("name", "is_immortal", "category", "origin", "is_very_benevolent")
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
     actions = ["mark_immortal"]
+
+    list_per_page = 1
 
     def mark_immortal(self, request, queryset):
         queryset.update(is_immortal=True)
