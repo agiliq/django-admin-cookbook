@@ -1,2 +1,2 @@
-How to add Custom Action Buttons (Not actions) to Django Admin list page?
+How to add Custom Action Buttons (not actions) to Django Admin list page?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

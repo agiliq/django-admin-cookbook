@@ -53,9 +53,9 @@ Bulk and custom actions
 
    add_actions
    export
-   import
    remove_delete_selected
    action_buttons
+   import
 
 Permissions
 +++++++++++++++++++++
@@ -65,7 +65,6 @@ Permissions
    :numbered:
 
    specific_users
-   restrict
    restrict_parts
    only_one
    remove_add_delete
