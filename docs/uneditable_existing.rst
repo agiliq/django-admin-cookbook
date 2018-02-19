@@ -11,4 +11,4 @@ You can do this by overriding :code:`get_readonly_fields` method, like this::
         else:
             return []
 
-:code:`obj` is None during the object creation, but set to the object being edited during an edit.
+:code:`obj` is :code:`None` during the object creation, but set to the object being edited during an edit.
