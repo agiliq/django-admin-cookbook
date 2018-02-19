@@ -88,6 +88,8 @@ class VillainAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ("name", "category", "origin")
     actions = ["export_as_csv"]
 
+    readonly_fields = ["added_on"]
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name",)
