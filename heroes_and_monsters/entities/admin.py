@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db.models import Count
 
-from .models import Hero, Villain, Category, Origin, HeroProxy
+from .models import Hero, Villain, Category, Origin, HeroProxy, AllEntity
 
 import csv
 import sys
@@ -196,3 +196,8 @@ class OriginAdmin(admin.ModelAdmin):
 
     hero_count.admin_order_field = '_hero_count'
     villain_count.admin_order_field = '_villain_count'
+
+
+@admin.register(AllEntity)
+class AllEntiryAdmin(admin.ModelAdmin):
+    list_display = ("id", "name")

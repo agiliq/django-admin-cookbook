@@ -98,3 +98,10 @@ class Villain(Entity):
     )
     is_unique = models.BooleanField(default=True)
     count = models.PositiveSmallIntegerField(default=1)
+
+class AllEntity(models.Model):
+    name = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = "entities_entity"
