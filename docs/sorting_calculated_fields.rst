@@ -4,7 +4,7 @@ How to enable sorting on calculated fields?
 Django adds sorting capabilities on fields which are attributes on the models.
 When you add a calculated field Django doesn't know how to do a :code:`order_by`, so it doesn't a sorting capability on that field.
 
-If you want to add sorting on a caluclated field, you have to tell Django, what to pass to :code:`order_by`. You can do this by setting
+If you want to add sorting on a calculated field, you have to tell Django, what to pass to :code:`order_by`. You can do this by setting
 :code:`admin_order_field` attribute on the calculated field method.
 
 You start from the admin you wrote in the pervious chapter (:doc:`optimize_queries`).::

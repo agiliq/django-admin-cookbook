@@ -5,8 +5,9 @@ from .models import Hero, Villain, Category, Origin, HeroProxy
 
 import csv
 import sys
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.safestring import mark_safe
+from django.urls import path
 
 
 class IsVeryBenevolentFilter(admin.SimpleListFilter):
@@ -60,6 +61,8 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     readonly_fields = ["father", "mother", "spouse", "headshot_image"]
 
+    change_list_template = "entities/heroes_changelist.html"
+
     def headshot_image(self, obj):
         return mark_safe('<img src="{url}" width="{width}" height={height} />'.format(
             url = obj.headshot.url,
@@ -73,6 +76,24 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     #         return ["name", "category"]
     #     else:
     #         return []
+
+    def get_urls(self):
+        urls = super().get_urls()
+        my_urls = [
+            path('immortal/', self.set_immortal),
+            path('mortal/', self.set_mortal),
+        ]
+        return my_urls + urls
+
+    def set_immortal(self, request):
+        self.model.objects.all().update(is_immortal=True)
+        self.message_user(request, "All heroes are now immortal")
+        return HttpResponseRedirect("../")
+
+    def set_mortal(self, request):
+        self.model.objects.all().update(is_immortal=False)
+        self.message_user(request, "All heroes are now mortal")
+        return HttpResponseRedirect("../")
 
     def save_model(self, request, obj, form, change):
         if not obj.pk:
@@ -92,6 +113,7 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     def is_very_benevolent(self, obj):
         return obj.benevolence_factor > 75
+
 
     # def has_add_permission(self, request):
     #     return has_hero_access(request.user)

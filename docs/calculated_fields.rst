@@ -46,7 +46,7 @@ The :code:`list_display`, as earlier, changes to :code:`list_display = ("name", 
 Performance considerations for calculated_fields
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-With either of the above approaches, you would be running two exta queries per object (One per caluclated field). You can find how to optimize this in
+With either of the above approaches, you would be running two exta queries per object (One per calculated field). You can find how to optimize this in
 :doc:`optimize_queries`.
 
 
