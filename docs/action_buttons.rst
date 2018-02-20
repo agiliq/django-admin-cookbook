@@ -6,13 +6,13 @@ However, they want to be able to change their mind and say all heroes are immort
 
 You have been absked to add two buttons - One which makes all heroes mortal, and one which makes all immortal. Since it affects all heores irrespective of the selection, this needs to be a separate button, not an action dropdown.
 
-First, we will change the template on the :code:`HeroAdmin` so we can add two buttons.:
+First, we will change the template on the :code:`HeroAdmin` so we can add two buttons.::
 
     @admin.register(Hero)
     class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
         change_list_template = "entities/heroes_changelist.html"
 
-Then we will override the :code:`get_urls`, and add the :code:`set_immortal` and :code:`set_mortal` methods on the model admin. They will serve as the two view methods.
+Then we will override the :code:`get_urls`, and add the :code:`set_immortal` and :code:`set_mortal` methods on the model admin. They will serve as the two view methods.::
 
     def get_urls(self):
         urls = super().get_urls()
@@ -32,7 +32,7 @@ Then we will override the :code:`get_urls`, and add the :code:`set_immortal` and
         self.message_user(request, "All heroes are now mortal")
         return HttpResponseRedirect("../")
 
-Finally, we create the :code:`entities/heroes_changelist.html` template by extending the :code:`admin/change_list.html`.
+Finally, we create the :code:`entities/heroes_changelist.html` template by extending the :code:`admin/change_list.html`.::
 
 
     {% extends 'admin/change_list.html' %}

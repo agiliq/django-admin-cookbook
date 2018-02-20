@@ -59,7 +59,7 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     # fields = ["headshot_image"]
 
-    readonly_fields = ["father", "mother", "spouse", "headshot_image"]
+    readonly_fields = ["headshot_image"]
 
     change_list_template = "entities/heroes_changelist.html"
 
