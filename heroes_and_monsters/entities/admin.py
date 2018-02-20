@@ -54,6 +54,7 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ("name", "is_immortal", "category", "origin", "is_very_benevolent", "children_display")
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
     actions = ["mark_immortal"]
+    date_hierarchy = 'added_on'
 
     exclude = ['added_by',]
 
