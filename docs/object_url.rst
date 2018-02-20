@@ -23,5 +23,5 @@ The :code:`reverse('admin:{}_{}_change'.format(obj._meta.app_label, obj._meta.mo
 
 The other options are
 
-* Delete: reverse('admin:{}_{}_delete'.format(obj._meta.app_label, obj._meta.model_name), args=(child.pk,))
-* History: reverse('admin:{}_{}_history'.format(obj._meta.app_label, obj._meta.model_name), args=(child.pk,))
+* Delete: :code:`reverse('admin:{}_{}_delete'.format(obj._meta.app_label, obj._meta.model_name), args=(child.pk,))`
+* History: :code:`reverse('admin:{}_{}_history'.format(obj._meta.app_label, obj._meta.model_name), args=(child.pk,))`
