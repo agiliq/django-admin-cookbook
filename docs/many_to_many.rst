@@ -25,4 +25,4 @@ You will see a column for children like this:
 
 .. image:: related_fk_display.png
 
-You can use the same method for M2M relations as well.
+You can use the same method for M2M relations as well. You should also read :doc:`object_url`.

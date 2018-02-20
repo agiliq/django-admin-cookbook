@@ -7,7 +7,7 @@ import csv
 import sys
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.safestring import mark_safe
-from django.urls import path
+from django.urls import path, reverse
 
 
 class IsVeryBenevolentFilter(admin.SimpleListFilter):
@@ -73,9 +73,16 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     def children_display(self, obj):
         display_text = ", ".join([
-            child.name for child in obj.children.all()
+            "<a href={}>{}</a>".format(
+                reverse('admin:{}_{}_change'.format(obj._meta.app_label, obj._meta.model_name),
+                    args=(child.pk,)),
+                child.name)
+             for child in obj.children.all()
         ])
-        return display_text or "-"
+        if display_text:
+            return mark_safe(display_text)
+        return "-"
+
     children_display.short_description = "Children"
 
     # def get_readonly_fields(self, request, obj=None):
