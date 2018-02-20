@@ -51,7 +51,7 @@ class ExportCsvMixin:
 
 @admin.register(Hero)
 class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
-    list_display = ("name", "is_immortal", "category", "origin", "is_very_benevolent")
+    list_display = ("name", "is_immortal", "category", "origin", "is_very_benevolent", "children_display")
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
     actions = ["mark_immortal"]
 
@@ -70,6 +70,13 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
             height=obj.headshot.height,
             )
     )
+
+    def children_display(self, obj):
+        display_text = ", ".join([
+            child.name for child in obj.children.all()
+        ])
+        return display_text or "-"
+    children_display.short_description = "Children"
 
     # def get_readonly_fields(self, request, obj=None):
     #     if obj:

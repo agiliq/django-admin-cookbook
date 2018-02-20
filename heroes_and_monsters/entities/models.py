@@ -72,7 +72,7 @@ class Hero(Entity):
 
     # relationships
     father = models.ForeignKey(
-        "self", related_name="+", null=True, blank=True, on_delete=models.SET_NULL
+        "self", related_name="children", null=True, blank=True, on_delete=models.SET_NULL
     )
     mother = models.ForeignKey(
         "self", related_name="+", null=True, blank=True, on_delete=models.SET_NULL
