@@ -99,6 +99,16 @@ class Villain(Entity):
     is_unique = models.BooleanField(default=True)
     count = models.PositiveSmallIntegerField(default=1)
 
+
+class HeroAcquaintance(models.Model):
+    "Non family contacts of a Hero"
+    hero = models.OneToOneField(Hero, on_delete=models.CASCADE)
+
+    friends = models.ManyToManyField(Hero, related_name="+")
+    detractors = models.ManyToManyField(Hero, related_name="+")
+    main_anatagonists = models.ManyToManyField(Villain, related_name="+")
+
+
 class AllEntity(models.Model):
     name = models.CharField(max_length=100)
 

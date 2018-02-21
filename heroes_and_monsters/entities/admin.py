@@ -160,9 +160,15 @@ class VillainAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     readonly_fields = ["added_on"]
 
+
+class VillainInline(admin.StackedInline):
+    model = Villain
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name",)
+
+    inlines = [VillainInline]
 
     def has_add_permission(self, request):
         return False

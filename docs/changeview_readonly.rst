@@ -12,4 +12,4 @@ You can do this by::
 
 Your create form looks like this:
 
-.. image::changeview_readonly.png
+.. image:: changeview_readonly.png
