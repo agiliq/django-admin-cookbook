@@ -61,6 +61,11 @@ class HeroForm(forms.ModelForm):
         model = Hero
         exclude = ["category"]
 
+class CategoryChoiceField(forms.ModelChoiceField):
+     def label_from_instance(self, obj):
+         return "Category: {}".format(obj.name)
+
+
 
 @admin.register(Hero)
 class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
@@ -110,7 +115,11 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     #         return []
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'category':
+            return CategoryChoiceField(queryset=Category.objects.all())
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+
 
     def get_urls(self):
         urls = super().get_urls()
