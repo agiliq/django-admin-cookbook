@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db.models import Count
 
-from .models import Hero, Villain, Category, Origin, HeroProxy, AllEntity
+from .models import Hero, Villain, Category, Origin, HeroProxy, AllEntity, HeroAcquaintance
 
 import csv
 import sys
@@ -49,12 +49,18 @@ class ExportCsvMixin:
     export_as_csv.short_description = "Export Selected"
 
 
+
+class HeroAcquaintanceInline(admin.TabularInline):
+    model = HeroAcquaintance
+
+
 @admin.register(Hero)
 class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ("name", "is_immortal", "category", "origin", "is_very_benevolent", "children_display")
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
     actions = ["mark_immortal"]
     date_hierarchy = 'added_on'
+    inlines = [HeroAcquaintanceInline]
 
     exclude = ['added_by',]
 
