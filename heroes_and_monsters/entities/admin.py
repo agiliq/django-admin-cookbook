@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.db.models import Count
+from django import forms
 
 from .models import Hero, Villain, Category, Origin, HeroProxy, AllEntity, HeroAcquaintance
 
@@ -53,14 +54,24 @@ class ExportCsvMixin:
 class HeroAcquaintanceInline(admin.TabularInline):
     model = HeroAcquaintance
 
+class HeroForm(forms.ModelForm):
+    category_name = forms.CharField()
+
+    class Meta:
+        model = Hero
+        exclude = ["category"]
+
 
 @admin.register(Hero)
 class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
+    # form = HeroForm
+
     list_display = ("name", "is_immortal", "category", "origin", "is_very_benevolent", "children_display")
     list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)
     actions = ["mark_immortal"]
     date_hierarchy = 'added_on'
     inlines = [HeroAcquaintanceInline]
+    raw_id_fields = ["category"]
 
     exclude = ['added_by',]
 
@@ -98,6 +109,9 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
     #     else:
     #         return []
 
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
     def get_urls(self):
         urls = super().get_urls()
         my_urls = [
@@ -117,9 +131,12 @@ class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
         return HttpResponseRedirect("../")
 
     def save_model(self, request, obj, form, change):
+        category_name = form.cleaned_data["category_name"]
         if not obj.pk:
             # Only set added_by during the first save.
             obj.added_by = request.user
+        category, _ = Category.objects.get_or_create(name=category_name)
+        obj.category = category
         super().save_model(request, obj, form, change)
 
 

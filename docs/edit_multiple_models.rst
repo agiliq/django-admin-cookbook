@@ -11,7 +11,7 @@ You have the :code:`Category` model, and you need to add and edit :code:`Villain
 
     @admin.register(Category)
     class CategoryAdmin(admin.ModelAdmin):
-        ..
+        ...
 
         inlines = [VillainInline]
 
