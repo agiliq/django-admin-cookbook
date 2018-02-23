@@ -1,4 +1,4 @@
-.Django Admin Cookbook
+Django Admin Cookbook
 ===========================================================
 
 Django Admin Cookbook - How to do things with Django admin.
