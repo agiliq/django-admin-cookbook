@@ -40,4 +40,6 @@ Then you can override :code:`response_change` and connect your template to the :
                 return HttpResponseRedirect(".")
             super().response_change()
 
+This is how your admin looks now.
+
 .. image:: custom_button.png
