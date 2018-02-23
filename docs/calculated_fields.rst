@@ -24,7 +24,7 @@ You can add two methods to your :code:`Origin` model like this::
     def villain_count(self):
         return self.villain_set.count()
 
-And change :code:"`list_display` to :code:`list_display = ("name", "hero_count", "villain_count")`.
+And change :code:`list_display` to :code:`list_display = ("name", "hero_count", "villain_count")`.
 
 
 Adding a method to the ModelAdmin
