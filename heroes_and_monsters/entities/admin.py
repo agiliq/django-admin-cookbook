@@ -191,6 +191,18 @@ class VillainAdmin(admin.ModelAdmin, ExportCsvMixin):
     actions = ["export_as_csv"]
 
     readonly_fields = ["added_on"]
+    change_form_template = "entities/villain_changeform.html"
+
+
+    def response_change(self, request, obj):
+        if "_make-unique" in request.POST:
+            matching_names_except_this = self.get_queryset(request).filter(name=obj.name).exclude(pk=obj.id)
+            matching_names_except_this.delete()
+            obj.is_umique = True
+            obj.save()
+            self.message_user(request, "This villain is now unique")
+            return HttpResponseRedirect(".")
+        super().response_change()
 
 
 class VillainInline(admin.StackedInline):
