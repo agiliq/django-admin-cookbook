@@ -24,7 +24,7 @@ You can add two methods to your :code:`Origin` model like this::
     def villain_count(self):
         return self.villain_set.count()
 
-And change :code"`list_display` to :code:`list_display = ("name", "hero_count", "villain_count")`.
+And change :code:"`list_display` to :code:`list_display = ("name", "hero_count", "villain_count")`.
 
 
 Adding a method to the ModelAdmin
@@ -41,7 +41,7 @@ If you don't want to add method to the model, you can do instead add the method 
         return obj.villain_set.count()
 
 
-The :code:`list_display`, as earlier, changes to :code:`list_display = ("name", "hero_count", "villain_count")`.
+The :code:`list_display` as earlier, changes to :code:`list_display = ("name", "hero_count", "villain_count")`.
 
 Performance considerations for calculated_fields
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
