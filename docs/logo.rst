@@ -23,13 +23,13 @@ You need to override the default templates provided by Django. In your django se
 
 This means that Django will look for templates in a directory called :code:`templates` inside each app, but you can override that by setting a value for :code:`TEMPLATES.DIRS`.
 
-We change the code:`'DIRS': [],` to code:`'DIRS': [os.path.join(BASE_DIR, 'templates/')],`, and create the `templates` folder. If your code::`STATICFILES_DIRS` is empty set it to::
+We change the :code:`'DIRS': [],` to :code:`'DIRS': [os.path.join(BASE_DIR, 'templates/')],`, and create the :code:`templates` folder. If your :code:`STATICFILES_DIRS` is empty set it to::
 
     STATICFILES_DIRS = [
         os.path.join(BASE_DIR, "static"),
     ]
 
-Now copy the code::`base_site.html` from the admin app to :code:`templates\admin` folder you just created. Replace thre default text in `branding` block with::
+Now copy the :code:`base_site.html` from the admin app to :code:`templates\admin` folder you just created. Replace thre default text in `branding` block with::
 
     <h1 id="site-name">
         <a href="{% url 'admin:index' %}">
