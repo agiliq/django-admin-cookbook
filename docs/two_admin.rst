@@ -10,6 +10,7 @@ We will keep the default admin for `entities` and create a new subclass of :code
 
 In our :code:`events/admin.py` we do::
 
+    from django.contrib.admin import AdminSite
     class EventAdminSite(AdminSite):
         site_header = "UMSRA Events Admin"
         site_title = "UMSRA Events Admin Portal"
