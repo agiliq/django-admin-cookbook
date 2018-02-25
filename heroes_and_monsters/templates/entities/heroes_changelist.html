@@ -2,16 +2,7 @@
 
 
 {% block object-tools %}
-    <div>
-        <form action="immortal/" method="POST">
-            {% csrf_token %}
-                <button type="submit">Make Immortal</button>
-        </form>
-        <form action="mortal/" method="POST">
-            {% csrf_token %}
-                <button type="submit">Make Mortal</button>
-        </form>
-    </div>
+    <a href="import-csv/">Import CSV</a>
     <br />
     {{ block.super }}
 
