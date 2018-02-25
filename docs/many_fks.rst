@@ -10,7 +10,7 @@ You can create a large number of categories like this::
 Now as :code:`Category` has more than 100000 objects, when you go to the :code:`Hero` admin, it will have category dropdown with 100000 selections.
 This will make the page both slow and the dropdown hard to use.
 
-You can change how admin hand;es it by setting the :code:`raw_id_fields`::
+You can change how admin handles it by setting the :code:`raw_id_fields`::
 
     @admin.register(Hero)
     class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
