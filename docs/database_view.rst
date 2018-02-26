@@ -10,7 +10,7 @@ You have a database view, created as this::
 
 
 It has all the names from :code:`Hero` and :code:`Villain`. The id's for Villain are set to :code:`10000+id as id`
-because we don't indent to cross 10000 Heroes::
+because we don't intend to cross 10000 Heroes::
 
     sqlite> select * from entities_entity;
     1|Krishna
