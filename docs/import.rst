@@ -36,7 +36,7 @@ You have been asked to allow csv imports on the :code:`Hero` admin. You will do 
             )
 
 
-Then you create the :code:`entities/heroes_changelist.html` templatee, by overriding the :code:`admin/change_list.html` template like this.::
+Then you create the :code:`entities/heroes_changelist.html` template, by overriding the :code:`admin/change_list.html` template like this.::
 
     {% extends 'admin/change_list.html' %}
 
