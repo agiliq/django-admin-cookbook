@@ -1,7 +1,7 @@
 How to optimize queries in Django admin?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-If you have a lot of calculated fields in your admin, you can be running multipel queries per object leading to your admin can becoming quite slow.
+If you have a lot of calculated fields in your admin, you can be running multiple queries per object leading to your admin can becoming quite slow.
 To fix this you can override the :code:`get_queryset` method on model admin to annotate the calculated fields.
 
 Lets take the example of this :code:`ModelAdmin` we have for :code:`Origin`::
@@ -17,7 +17,7 @@ Lets take the example of this :code:`ModelAdmin` we have for :code:`Origin`::
             return obj.villain_set.count()
 
 
-This add two extra queries per row in your listview page. To fix this you can override the :code:`get_queryset` to annotate the counted fields,
+This adds two extra queries per row in your listview page. To fix this you can override the :code:`get_queryset` to annotate the counted fields,
 and then use the annotated fields in your ModelAdmin methods.
 
 With the changes, your ModelAdmin field looks like this::
