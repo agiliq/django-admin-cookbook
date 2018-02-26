@@ -10,7 +10,7 @@ Which looks like this
 
 .. image:: filter_calculated_fixed.png
 
-The :code:`is_very_benevolent` field show the string `True` and `False`, unlike the builin BooleanFields which show an on and off indicator.
+The :code:`is_very_benevolent` field shows the string `True` and `False`, unlike the builtin BooleanFields which show an on and off indicator.
 To fix this, you add a :code:`boolean` attribute on your method. You final modeladmin looks like this::
 
     @admin.register(Hero)
