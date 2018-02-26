@@ -35,4 +35,4 @@ And change the :code:`urls.py` to ::
     ]
 
 
-This separates the admin. Noth admins are available at their respective urls, :code:`/entity-admin/` and :code:`event-admin/`.
+This separates the admin. Both admins are available at their respective urls, :code:`/entity-admin/` and :code:`event-admin/`.
