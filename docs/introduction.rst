@@ -7,7 +7,7 @@ who have some experience with Django admin, but are looking to expand their know
 It takes the form of question and answers about common tasks you might do with Django admin. All the chapters are based on a common set of models, which you can read in detail here (:doc:`models`). In short, we have two apps,
 :code:`events` and :code:`entities`. The models are
 
-* Events: :code:`Epic`, :code:`Event`, :code:`EventHero`, :code:`EventVillian`
+* Events: :code:`Epic`, :code:`Event`, :code:`EventHero`, :code:`EventVillain`
 * Entities: :code:`Category`, :code:`Origin`, :code:`Hero`, :code:`Villain`
 
 
