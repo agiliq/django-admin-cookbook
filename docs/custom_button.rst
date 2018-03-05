@@ -34,7 +34,7 @@ Then you can override :code:`response_change` and connect your template to the :
             if "_make-unique" in request.POST:
                 matching_names_except_this = self.get_queryset(request).filter(name=obj.name).exclude(pk=obj.id)
                 matching_names_except_this.delete()
-                obj.is_umique = True
+                obj.is_unique = True
                 obj.save()
                 self.message_user(request, "This villain is now unique")
                 return HttpResponseRedirect(".")
