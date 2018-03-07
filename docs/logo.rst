@@ -1,7 +1,7 @@
 How to add a logo to Django admin?
 ===========================================================
 
-Your highers ups at UMSRA loge the admin you have created till now, but marketing wants to put the UMSRA logo on all admin pages.
+Your higher ups at UMSRA love the admin you have created till now, but marketing wants to put the UMSRA logo on all admin pages.
 
 You need to override the default templates provided by Django. In your django settings, you code::`TEMPLATES` setting looks like this. ::
 

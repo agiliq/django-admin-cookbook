@@ -40,6 +40,6 @@ You have added filtering on the fields which come from the models, but you also 
 
 And then change your :code:`list_filter` to :code:`list_filter = ("is_immortal", "category", "origin", IsVeryBenevolentFilter)`.
 
-With this you can filter on the calcualted field, and your admin looks like this:
+With this you can filter on the calculated field, and your admin looks like this:
 
 .. image:: filter_calculated_fixed.png

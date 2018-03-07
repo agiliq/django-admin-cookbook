@@ -4,7 +4,7 @@ How to add Custom Action Buttons (not actions) to Django Admin list page?
 UMSRA has decided that given sufficient kryptonite, all Heroes are mortal.
 However, they want to be able to change their mind and say all heroes are immortal.
 
-You have been absked to add two buttons - One which makes all heroes mortal, and one which makes all immortal. Since it affects all heores irrespective of the selection, this needs to be a separate button, not an action dropdown.
+You have been asked to add two buttons - One which makes all heroes mortal, and one which makes all immortal. Since it affects all heroes irrespective of the selection, this needs to be a separate button, not an action dropdown.
 
 First, we will change the template on the :code:`HeroAdmin` so we can add two buttons.::
 

@@ -5,7 +5,7 @@ You have been asked to add ability to export :code:`Hero` and :code:`Villain` fr
 There are a number of third party apps which allow doing this, but its quite easy without adding another dependency.
 You will add an admin action to :code:`HeroAdmin` and :code:`VillanAdmin`.
 
-An admin action always has this signature `def admin_action(modeladmin, request, queryset):`, alternatively you can add directly as a method on the :code:`ModelAdmin` like this::
+An admin action always has this signature :code:`def admin_action(modeladmin, request, queryset):`, alternatively you can add it directly as a method on the :code:`ModelAdmin` like this::
 
     class SomeModelAdmin(admin.ModelAdmin):
 
@@ -21,7 +21,7 @@ To add csv export to :code:`HeroAdmin` you can do something like this::
 
     export_as_csv.short_description = "Export Selected"
 
-This adds an action called export selected, which looks like this
+This adds an action called export selected, which looks like this:
 
 .. image:: export_selected.png
 
@@ -46,7 +46,7 @@ You will then change the :code:`export_as_csv` to this::
 
         return response
 
-This exports all the selected rows. If you notice, :code:`export_as_csv` doens't have anything specific to :code:`Hero`,
+This exports all of the selected rows. If you notice, :code:`export_as_csv` doens't have anything specific to :code:`Hero`,
 so you can extract the method to a mixin.
 
 With the changes, your code looks like this::
@@ -85,4 +85,4 @@ With the changes, your code looks like this::
         list_display = ("name", "category", "origin")
         actions = ["export_as_csv"]
 
-You can add such export to other models by subclassing from :code:`ExportCsvMixin`
+You can add such an export to other models by subclassing from :code:`ExportCsvMixin`
