@@ -1,6 +1,9 @@
 Django Admin Cookbook
 ===========================================================
 
+.. image:: book-cover.png
+
+
 Django Admin Cookbook - How to do things with Django admin.
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
