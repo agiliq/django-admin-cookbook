@@ -1,7 +1,7 @@
 How to get Django admin urls for specific objects?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-You have a children column displatying the names of each heroes' children. You have been asked to link each children to the change page. You can do it like this.::
+You have a children column displaying the names of each heroes' children. You have been asked to link each children to the change page. You can do it like this.::
 
     @admin.register(Hero)
     class HeroAdmin(admin.ModelAdmin, ExportCsvMixin):
