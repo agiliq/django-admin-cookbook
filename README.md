@@ -9,11 +9,11 @@ We have a set of models which we use across the book for answering these questio
 
 ### The setup
 
-YOu have been hired by the United Mytic and Supernormal Research Agency - The UMSRA. UMSRA researches and documents mytic and supernormal events. You have been tasked with creating a web app where UMSRA researchers can document their findings and look up their collegue's research.
+You have been hired by the United Mytic and Supernormal Research Agency - The UMSRA. UMSRA researches and documents mytic and supernormal events. You have been tasked with creating a web app where UMSRA researchers can document their findings and look up their collegue's research.
 
 ### The models
 
-You plan to write a set of models and an assoicated admin for UMSRA researchers. You come up with two apps `entities` and `events`. The models are
+You plan to write a set of models and an associated admin for UMSRA researchers. You come up with two apps `entities` and `events`. The models are
 
 
 #### Events
