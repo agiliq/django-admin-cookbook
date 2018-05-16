@@ -1,4 +1,4 @@
-How to add date base filtering in Django admin?
+How to add date based filtering in Django admin?
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 You can add a date based filtering on any date field by setting the :code:`date_hierarchy`.::
