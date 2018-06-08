@@ -38,7 +38,7 @@ Then you can override :code:`response_change` and connect your template to the :
                 obj.save()
                 self.message_user(request, "This villain is now unique")
                 return HttpResponseRedirect(".")
-            super().response_change()
+            return super().response_change(request, obj)
 
 This is how your admin looks now.
 

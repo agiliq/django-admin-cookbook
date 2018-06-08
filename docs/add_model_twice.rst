@@ -2,7 +2,7 @@ How to add a model twice to Django admin?
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 
-You need to add the :code:`Hero` model twice to the admin, one as a regular admin area, and one as read only admin. (SOme user will potentially see only the read only admin.)
+You need to add the :code:`Hero` model twice to the admin, one as a regular admin area, and one as read only admin. (Some user will potentially see only the read only admin.)
 
 If you have try to register the same model twice::
 
