@@ -115,6 +115,5 @@ latex_documents = [
     (master_doc, 'Djangoadmincookbook.tex', 'Django Admin Cookbook',
      'Agiliq', 'howto'),
 ]
-
 # -- Options for RTD (Read The Docs) service ---------------------------------------------
 RTD_NEW_THEME = True
