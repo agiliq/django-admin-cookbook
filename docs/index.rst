@@ -138,4 +138,3 @@ Indices and tables
    models
 
 * :ref:`genindex`
-* :ref:`modindex`

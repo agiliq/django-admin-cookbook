@@ -117,3 +117,6 @@ latex_documents = [
 ]
 # -- Options for RTD (Read The Docs) service ---------------------------------------------
 RTD_NEW_THEME = True
+
+def setup(app):
+    app.add_javascript('js/join.js')
