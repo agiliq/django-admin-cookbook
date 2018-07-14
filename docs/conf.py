@@ -118,5 +118,6 @@ latex_documents = [
 # -- Options for RTD (Read The Docs) service ---------------------------------------------
 RTD_NEW_THEME = True
 
+# -- Custom marketing js ---
 def setup(app):
     app.add_javascript('js/join.js')
