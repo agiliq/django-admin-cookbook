@@ -14,7 +14,8 @@
 extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_templates',]
+
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -121,3 +122,12 @@ RTD_NEW_THEME = True
 # -- Custom marketing js ---
 def setup(app):
     app.add_javascript('js/custom.js')
+
+
+# Design customizations
+
+html_theme_options = {
+    'display_version': False,
+}
+
+html_show_sphinx = False

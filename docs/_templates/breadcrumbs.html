@@ -1,0 +1,14 @@
+{%- extends "sphinx_rtd_theme/breadcrumbs.html" %}
+
+{% block breadcrumbs %}
+      <li><a href="https://books.agiliq.com/">{{ _('Books') }}</a> &raquo;</li>
+      <li><a href="{{ pathto(master_doc) }}">{{ _('Django Admin Cookbook') }}</a> &raquo;</li>
+        {% for doc in parents %}
+          <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
+        {% endfor %}
+      <li>{{ title }}</li>
+    {% endblock %}
+
+
+{% block breadcrumbs_aside %}
+{% endblock %}
