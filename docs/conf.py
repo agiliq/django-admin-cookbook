@@ -122,6 +122,7 @@ RTD_NEW_THEME = True
 # -- Custom marketing js ---
 def setup(app):
     app.add_javascript('js/custom.js')
+    app.add_stylesheet('css/custom.css')
 
 
 # Design customizations

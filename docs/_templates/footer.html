@@ -1,5 +1,22 @@
 {%- extends "sphinx_rtd_theme/footer.html" %}
 
 {%- block extrafooter %}
-<a href="https://books.agiliq.com">More books at books.agiliq.com</a>
+<p>
+  <a href="https://books.agiliq.com"  class="btn">Read more books at https://books.agiliq.com</a>
+</p>
+
+<div class="other-books">
+  <a href="http://books.agiliq.com/projects/django-api-polls-tutorial/">
+    <img src="{{ pathto('_static/book-covers/book-cover-api-320.png', 1) }}" />
+  </a>
+  <a href="https://books.agiliq.com/projects/django-admin-cookbook/">
+    <img src="{{ pathto('_static/book-covers/book-cover-dac-320.png', 1) }}" />
+  </a>
+  <a href="https://books.agiliq.com/projects/django-orm-cookbook/">
+    <img src="{{ pathto('_static/book-covers/book-cover-doc-320.png', 1) }}" />
+  </a>
+  <a href="https://books.agiliq.com/projects/django-multi-tenant/">
+    <img src="{{ pathto('_static/book-covers/book-cover-mta-320.png', 1) }}" />
+  </a>
+</div>
 {% endblock %}
