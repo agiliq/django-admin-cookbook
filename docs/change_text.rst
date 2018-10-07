@@ -21,7 +21,7 @@ By default it looks like this and is set to :code:`“Django administration”`
 Listview Page
 ++++++++++++++++++++++
 
-BY default it looks like this and is set to :code:`“Site administration”`
+By default it looks like this and is set to :code:`“Site administration”`
 
 .. image:: images/default_listview.png
 
