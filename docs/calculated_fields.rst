@@ -18,7 +18,7 @@ Adding a method to the model
 You can add two methods to your :code:`Origin` model like this::
 
 
-    def hero_count(self,):
+    def hero_count(self):
         return self.hero_set.count()
 
     def villain_count(self):
