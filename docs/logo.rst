@@ -26,7 +26,7 @@ This means that Django will look for templates in a directory called :code:`temp
 We change the :code:`'DIRS': [],` to :code:`'DIRS': [os.path.join(BASE_DIR, 'templates/')],`, and create the :code:`templates` folder. If your :code:`STATICFILES_DIRS` is empty set it to::
 
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "static"),
+        os.path.join(BASE_DIR, "staticfiles"),
     ]
 
 Now copy the :code:`base_site.html` from the admin app to :code:`templates\admin` folder you just created. Replace thre default text in `branding` block with::
