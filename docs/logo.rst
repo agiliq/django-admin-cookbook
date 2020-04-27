@@ -41,7 +41,7 @@ With the changes your base_site.html will look like this::
 
     {% extends "admin/base.html" %}
 
-    {% load staticfiles %}
+    {% load static %}
 
     {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
