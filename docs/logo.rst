@@ -34,6 +34,7 @@ Now copy the :code:`base_site.html` from the admin app to :code:`templates\admin
     <h1 id="site-name">
         <a href="{% url 'admin:index' %}">
             <img src="{% static 'umsra_logo.png' %}" height="40px" />
+            {{ site_header|default:_('Django administration') }}
         </a>
     </h1>
 
