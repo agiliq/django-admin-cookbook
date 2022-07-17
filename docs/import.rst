@@ -68,6 +68,6 @@ With these changes, you get a link on the :code:`Hero` changelist page.
 
 .. image:: import_1.png
 
-And the import form apge looks like this.
+And the import form page looks like this.
 
 .. image:: import_2.png
