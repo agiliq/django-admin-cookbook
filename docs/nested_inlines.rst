@@ -2,7 +2,7 @@ How to add nested inlines in Django admin?
 ==========================================
 
 
-You have yor models defined like this::
+You have your models defined like this::
 
     class Category(models.Model):
         ...
